@@ -3,9 +3,9 @@
 # ==========================================
 # CONFIGURATION & MATRIX ARRAY
 # ==========================================
-PROMPT_FILE="../prompts/12-DeterminantsAndLinearEquations.md"
-OUT_DIR="results/CalculusAndAnalyticGeometry"
-OUT_PREFIX="12-DeterminantsAndLinearEquations"
+PROMPT_FILE="prompts/05-Army-Requirements-1943-44.md"
+OUT_DIR="results/Logistics-and-Strategy"
+OUT_PREFIX="05-Army-Requirements-1943-44"
 
 # Exact OpenRouter active network slug identities
 MODELS=(

@@ -30,7 +30,7 @@ graph TD
 We model the spoilage and degradation of supply stocks in tropical environments using an exponential decay model where the shelf-life ($S$) is a function of humidity and temperature degradation factor ($\alpha$).
 
 ### Mathematical Formulation
-$S_t = S_0 \\cdot e^{-\\alpha \\cdot t}$
+$S_t = S_0 \cdot e^{-\alpha \cdot t}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

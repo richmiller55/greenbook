@@ -31,7 +31,7 @@ graph TD
 Multi-theater resource allocation balances priorities by assigning strategic weights to theaters and computing the optimal supply distribution factor based on utility and distance costs.
 
 ### Mathematical Formulation
-$S_i = \\frac{W_i \\cdot C_{total}}{\\sum_{j} W_j} \\cdot (1 - \\theta_i)$
+$S_i = \frac{W_i \cdot C_{total}}{\sum_{j} W_j} \cdot (1 - \theta_i)$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

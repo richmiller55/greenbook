@@ -5,9 +5,6 @@ This chapter explores the physical mechanics of logistics: moving supplies from 
 
 ---
 
-## 2. Interactive Study Fill-ins (Details to Fill In)
-*To complete your study of this chapter, research and fill in the missing metrics below:*
-
 - **Distribution Capabilities:**
   - The "overland rail movement" from interior depots to Atlantic ports reached a peak of `[___________]` carloads per day in late 1943.
   - Balanced loading required maintaining a ship's density of approximately `[___________]` cubic feet per measurement ton.
@@ -31,7 +28,7 @@ graph TD
 To prevent a vessel from "filling its volume" before "reaching its weight limit" (or vice versa), cargo must be balanced. The optimal ratio of heavy cargo ($M_{heavy}$) to light/volumetric cargo ($M_{light}$) is derived based on vessel weight limit ($W_{max}$) and volumetric capacity ($V_{max}$).
 
 ### Mathematical Formulation
-$S_f \\cdot M_{heavy} + S_l \\cdot M_{light} \\le V_{max} \\quad \\text{and} \\quad M_{heavy} + M_{light} \\le W_{max}$
+$S_f \cdot M_{heavy} + S_l \cdot M_{light} \le V_{max} \quad \text{and} \quad M_{heavy} + M_{light} \le W_{max}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

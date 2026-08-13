@@ -5,8 +5,6 @@ Determining the material requirements for an army of millions of men required pr
 
 ---
 
-## 2. Interactive Study Fill-ins (Details to Fill In)
-*To complete your study of this chapter, research and fill in the missing metrics below:*
 
 - **Requirement Planning:**
   - The standard daily maintenance requirement for a US soldier in the field in 1943 was calculated at `[___________]` pounds of supply per day.
@@ -31,7 +29,7 @@ graph TD
 Requirement forecasting models future monthly tonnage requirements ($R_{month}$) using the troop strength ($P$), the daily supply factor ($F_{day}$), and an equipment loss/replacement buffer ($B$).
 
 ### Mathematical Formulation
-$R_{month} = \\left( P \\cdot F_{day} \\cdot 30 \\right) \\cdot (1 + B)$
+$R_{month} = \left( P \cdot F_{day} \cdot 30 \right) \cdot (1 + B)$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

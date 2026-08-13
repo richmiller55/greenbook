@@ -31,7 +31,7 @@ graph TD
 Logistical power can be modeled as the correlation between total theater tonnage delivered ($T_{theater}$) and the overall combat power ($P_{combat}$) of the divisions in contact.
 
 ### Mathematical Formulation
-$P_{combat} = \\alpha \\cdot T_{theater} \\cdot N_{divisions}$
+$P_{combat} = \alpha \cdot T_{theater} \cdot N_{divisions}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

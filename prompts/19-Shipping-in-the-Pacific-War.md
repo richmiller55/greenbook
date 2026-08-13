@@ -31,7 +31,7 @@ graph TD
 To sustain a constant daily delivery ($D_{target}$) at an island base given a ship's turnaround time ($T_{cycle}$) and average cargo capacity ($C$), we calculate the total fleet size ($N$) required.
 
 ### Mathematical Formulation
-$N = \\frac{D_{target} \\cdot T_{cycle}}{C}$
+$N = \frac{D_{target} \cdot T_{cycle}}{C}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

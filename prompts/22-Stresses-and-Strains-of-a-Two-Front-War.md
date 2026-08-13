@@ -30,7 +30,7 @@ graph TD
 We model global resource allocation as a multi-objective linear programming problem where we maximize overall combat readiness across two fronts under production constraints.
 
 ### Mathematical Formulation
-$\\text{Maximize } U = a \\cdot X_{ETO} + b \\cdot X_{PAC} \\quad \\text{subject to } X_{ETO} + X_{PAC} \\le P_{total}$
+$\text{Maximize } U = a \cdot X_{ETO} + b \cdot X_{PAC} \quad \text{subject to } X_{ETO} + X_{PAC} \le P_{total}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

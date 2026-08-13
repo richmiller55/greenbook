@@ -30,7 +30,7 @@ graph TD
 The pool drawdown can be modeled as an exponential decay function where supply deliveries ($D$) drop rapidly following strategic milestone dates ($t$).
 
 ### Mathematical Formulation
-$D_t = D_{peak} \\cdot e^{-k \\cdot (t - t_{VE})}$
+$D_t = D_{peak} \cdot e^{-k \cdot (t - t_{VE})}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

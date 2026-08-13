@@ -1,4 +1,4 @@
-# Chapter 2: Husky and Bolero
+01-Logistics-and-Strategy-Spring-1943.md# Chapter 2: Husky and Bolero
 
 ## 1. Context & Core Themes
 This chapter focuses on the severe strategic conflict between two massive operations in mid-1943: Operation HUSKY (the amphibious invasion of Sicily) and Operation BOLERO (the long-term logistical build-up in the UK). The core logistical bottleneck was the allocation of Landing Craft (specifically LSTs, LCIs, and LCTs) and combat-loaded troop transports.
@@ -34,7 +34,7 @@ graph TD
 The resource conflict between HUSKY and BOLERO can be modeled as a resource allocation problem under a hard ceiling where allocations must satisfy minimum operational thresholds for both theaters.
 
 ### Mathematical Formulation
-$X_{H} + X_{B} \\le C_{total}, \\quad X_{H} \\ge X_{H}^{min}, \\quad X_{B} \\ge X_{B}^{min}$
+$X_{H} + X_{B} \le C_{total}, \quad X_{H} \ge X_{H}^{min}, \quad X_{B} \ge X_{B}^{min}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

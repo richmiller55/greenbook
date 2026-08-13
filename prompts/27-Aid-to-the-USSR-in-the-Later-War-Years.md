@@ -30,7 +30,7 @@ graph TD
 Selecting the optimal transport route under threat requires risk-weighting. We model the expected cargo delivered ($C_{delivered}$) as a function of transit loss rates ($L_r$) and transit duration ($T$).
 
 ### Mathematical Formulation
-$C_{delivered} = C_{initial} \\cdot (1 - L_r)$
+$C_{delivered} = C_{initial} \cdot (1 - L_r)$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

@@ -29,7 +29,7 @@ graph TD
 Decentralized logistics networks route supplies from regional hubs to advance bases. We model the distribution cost ($C_{dist}$) as a sum of transit distances weighted by supply volume.
 
 ### Mathematical Formulation
-$C_{dist} = \\sum_{i} V_i \\cdot D_i$
+$C_{dist} = \sum_{i} V_i \cdot D_i$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

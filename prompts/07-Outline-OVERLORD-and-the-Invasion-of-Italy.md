@@ -30,7 +30,7 @@ graph TD
 Port throughput ($P_{throughput}$) is constrained by berth occupancy rates, discharge rates per hook-hour, and truck evacuation capacity.
 
 ### Mathematical Formulation
-$P_{throughput} = B \\cdot R_{discharge} \\cdot 24 \\cdot E_{efficiency}$
+$P_{throughput} = B \cdot R_{discharge} \cdot 24 \cdot E_{efficiency}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

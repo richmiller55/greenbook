@@ -30,7 +30,7 @@ graph TD
 Standardization checks the compatibility of weapon calibers and replacement parts. We model a compatibility matching system to verify if a foreign division can be sustained using standard US logistics pipelines.
 
 ### Mathematical Formulation
-$C = \\begin{cases} 1 & \\text{if } Caliber_{force} = Caliber_{pipeline} \\\\ 0 & \\text{otherwise} \\end{cases}$
+$C = \begin{cases} 1 & \text{if } Caliber_{force} = Caliber_{pipeline} \\ 0 & \text{otherwise} \end{cases}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

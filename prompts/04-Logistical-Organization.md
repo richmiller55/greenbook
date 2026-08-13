@@ -32,7 +32,7 @@ graph TD
 We model the organizational communication latency ($L$) as a function of hierarchical depth ($D$) and span of control ($S$) where nodes route logistical requests downstream.
 
 ### Mathematical Formulation
-$L = D \\cdot \\log_e(S) + T_{processing}$
+$L = D \cdot \log_e(S) + T_{processing}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

@@ -32,7 +32,7 @@ graph TD
 Stock balance is evaluated by comparing actual stock levels ($S_{actual}$) against authorized levels ($S_{auth}$). Excesses and deficits are computed to identify system-wide imbalances.
 
 ### Mathematical Formulation
-$Imbalance_i = \\frac{S_{actual} - S_{auth}}{S_{auth}}$
+$Imbalance_i = \frac{S_{actual} - S_{auth}}{S_{auth}}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

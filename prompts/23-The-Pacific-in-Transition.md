@@ -31,7 +31,7 @@ graph TD
 Shifting logistical centers of gravity involves relocations. We model the base relocation transit cost ($C_{reloc}$) as a function of cargo volume ($V$), distance ($D$), and setup time delay ($S$).
 
 ### Mathematical Formulation
-$C_{reloc} = V \\cdot (D \\cdot T_{transit} + S)$
+$C_{reloc} = V \cdot (D \cdot T_{transit} + S)$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

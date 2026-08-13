@@ -31,7 +31,7 @@ graph TD
 We model the operational dependency tree using the Critical Path Method (CPM). The early start ($ES$) and late start ($LS$) times for critical operations (like ANVIL) are computed based on resource constraints.
 
 ### Mathematical Formulation
-$ES_j = \\max_{i \\in Pred(j)} \\{ EF_i \\}$
+$ES_j = \max_{i \in Pred(j)} \{ EF_i \}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

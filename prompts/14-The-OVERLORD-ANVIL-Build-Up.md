@@ -31,7 +31,7 @@ graph TD
 Vehicle waterproofing required specialized kits, labor, and space. We model the throughput of waterproofing lines using a multi-station queue capacity.
 
 ### Mathematical Formulation
-$T_{waterproof} = N_{lines} \\cdot R_{rate} \\cdot H_{hours}$
+$T_{waterproof} = N_{lines} \cdot R_{rate} \cdot H_{hours}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

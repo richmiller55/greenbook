@@ -30,7 +30,7 @@ graph TD
 We model the port clearance queue as a shared resource system using a single-server queueing model (M/M/1) where arrival rate ($\lambda$) and service rate ($\mu$) determine the average port delay ($W$).
 
 ### Mathematical Formulation
-$W = \\frac{1}{\\mu - \\lambda}$
+$W = \frac{1}{\mu - \lambda}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

@@ -31,7 +31,7 @@ graph TD
 The Red Ball Express is a network flow problem. The maximum daily tonnage ($T_{max}$) delivered is bounded by the number of operational trucks, fuel consumption of the fleet, and road congestion limits.
 
 ### Mathematical Formulation
-$T_{max} = \\frac{N \\cdot P_{payload}}{2 \\cdot (D / V + T_{load})}$
+$T_{max} = \frac{N \cdot P_{payload}}{2 \cdot (D / V + T_{load})}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

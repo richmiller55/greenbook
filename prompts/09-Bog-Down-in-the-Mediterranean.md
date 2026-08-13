@@ -31,7 +31,7 @@ graph TD
 Road capacity in mountainous terrain under combat and weather conditions is limited. Truck throughput capacity ($C_{road}$) is modeled as a function of operational trucks ($N$), speed ($V$), and road degradation factor ($F_{degrad}$).
 
 ### Mathematical Formulation
-$C_{road} = N \\cdot \\frac{V \\cdot Payload}{Distance} \\cdot F_{degrad}$
+$C_{road} = N \cdot \frac{V \cdot Payload}{Distance} \cdot F_{degrad}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

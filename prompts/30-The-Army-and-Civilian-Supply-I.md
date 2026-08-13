@@ -30,7 +30,7 @@ graph TD
 Calculating caloric relief requirements models the total tonnage of food imports needed ($T_{food}$) based on population size ($P$) and daily caloric target ($C$).
 
 ### Mathematical Formulation
-$T_{food} = \\frac{P \\cdot C \\cdot 30}{K_{calories/ton}}$
+$T_{food} = \frac{P \cdot C \cdot 30}{K_{calories/ton}}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

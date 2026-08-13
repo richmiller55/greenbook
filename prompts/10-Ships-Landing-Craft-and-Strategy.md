@@ -31,7 +31,7 @@ graph TD
 Fleet sizing must account for both production rate ($P_t$) and combat/operational attrition rate ($A_t$) to calculate net fleet size over time.
 
 ### Mathematical Formulation
-$F_{t+1} = F_t + P_t - A_t \\cdot F_t$
+$F_{t+1} = F_t + P_t - A_t \cdot F_t$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

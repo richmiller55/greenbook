@@ -30,7 +30,7 @@ graph TD
 Bilateral resource-exchange can be modeled as a trade matrix. Let $L_{ij}$ be the value of resources transferred from nation $i$ to nation $j$. The net transfer balance ($B_i$) for any country is computed to verify contribution values.
 
 ### Mathematical Formulation
-$B_i = \\sum_{j} L_{ij} - \\sum_{j} L_{ji}$
+$B_i = \sum_{j} L_{ij} - \sum_{j} L_{ji}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

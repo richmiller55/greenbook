@@ -39,7 +39,7 @@ graph TD
 Logistical throughput is constrained by the turnaround time ($T$) of cargo vessels. We model the turnaround time in days for a single convoy cycle as a function of distance, speed, port delays, and convoy assembly time.
 
 ### Mathematical Formulation
-$T = \\frac{2D}{24 \\cdot V} + L_{port} + U_{port} + D_{convoy}$
+$T = \frac{2D}{24 \cdot V} + L_{port} + U_{port} + D_{convoy}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

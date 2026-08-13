@@ -30,7 +30,7 @@ graph TD
 Road convoy capacity is constrained by the number of operational trucks, fuel depots along the route, and road maintenance capabilities. We model the daily tonnage capacity ($T_{road}$) of a single-lane wilderness highway.
 
 ### Mathematical Formulation
-$T_{road} = \\frac{N_{trucks} \\cdot Capacity_{truck}}{Interval_{days} + T_{transit}}$
+$T_{road} = \frac{N_{trucks} \cdot Capacity_{truck}}{Interval_{days} + T_{transit}}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

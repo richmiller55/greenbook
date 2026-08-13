@@ -30,7 +30,7 @@ graph TD
 The efficiency of supply delivery in the Pacific decayed exponentially with distance. We model the effective supply throughput ($S_{eff}$) delivered to an island base as a function of distance ($D$) and operational transport loss/turnaround delays.
 
 ### Mathematical Formulation
-$S_{eff} = S_0 \\cdot e^{-\\lambda \\cdot D}$
+$S_{eff} = S_0 \cdot e^{-\lambda \cdot D}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:

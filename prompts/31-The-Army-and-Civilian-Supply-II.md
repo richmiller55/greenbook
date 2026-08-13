@@ -30,7 +30,7 @@ graph TD
 Relief distribution queues model civilian wait times at supply stations. We model the average queue size ($L_q$) using basic queueing theory parameters.
 
 ### Mathematical Formulation
-$L_q = \\frac{\\lambda^2}{\\mu \\cdot (\\mu - \\lambda)}$
+$L_q = \frac{\lambda^2}{\mu \cdot (\mu - \lambda)}$
 
 ### Scala 3.8.3 Implementation
 Below is the compile-safe Scala 3.8.3 model representing these parameters:
