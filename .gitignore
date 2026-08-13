@@ -1,0 +1,50 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# sbt
+dist/*
+target/
+**/target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/local-plugins.sbt
+.history
+.sbt-scripted/
+local.sbt
+
+# Scala 3 / Scalac
+*.class
+*.tasty
+*.tasty.gz
+.scala-build/
+# Metals / Bloop / BSP
+.bloop/
+.metals/
+.bsp/
+metals.sbt
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+.idea_modules
+out/
+
+# Other
+/.worksheet/
+*.*~
+# Backup files
+*.bak
+*.swp
