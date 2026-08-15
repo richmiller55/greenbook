@@ -3,10 +3,9 @@
 # ==========================================
 # CONFIGURATION & MATRIX ARRAY
 # ==========================================
-PROMPT_FILE="../prompts/12-DeterminantsAndLinearEquations.md"
-OUT_DIR="results/CalculusAndAnalyticGeometry"
-OUT_PREFIX="12-DeterminantsAndLinearEquations"
-
+PROMPT_FILE="prompts/13-v2-OVERLORD-and-ANVIL.md"
+OUT_DIR="results/Logistics-and-Strategy-v2"
+OUT_PREFIX="13-v2-OVERLORD-and-ANVIL"
 # Exact OpenRouter active network slug identities
 MODELS=(
     "anthropic/claude-4.8-opus-20260528"
