@@ -3,9 +3,9 @@
 # ==========================================
 # CONFIGURATION & MATRIX ARRAY
 # ==========================================
-PROMPT_FILE="prompts/13-v2-OVERLORD-and-ANVIL.md"
+PROMPT_FILE="prompts/23-v2-The-Pacific-in-Transition.md"
 OUT_DIR="results/Logistics-and-Strategy-v2"
-OUT_PREFIX="13-v2-OVERLORD-and-ANVIL"
+OUT_PREFIX="23-v2-The-Pacific-in-Transition"
 # Exact OpenRouter active network slug identities
 MODELS=(
     "anthropic/claude-4.8-opus-20260528"
