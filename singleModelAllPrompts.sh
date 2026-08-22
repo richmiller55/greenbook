@@ -1,20 +1,13 @@
 #!/bin/bash
 
 # ==========================================
-# CONFIGURATION & MATRIX ARRAY
+# CONFIGURATION
 # ==========================================
-PROMPT_FILE="prompts/32-v2-Logistics-and-Strategy-in-World-War-II.md"
+# Default model slug identity from OpenRouter (stealth/ox-alpha)
+DEFAULT_MODEL="stealth/ox-alpha"
+MODEL="${1:-$DEFAULT_MODEL}"
+PROMPTS_DIR="prompts"
 OUT_DIR="results/Logistics-and-Strategy-v2"
-OUT_PREFIX="32-v2-Logistics-and-Strategy-in-World-War-II"
-# Exact OpenRouter active network slug identities
-MODELS=(
-    "anthropic/claude-4.8-opus-20260528"
-    "moonshotai/kimi-k2-thinking"
-    "deepseek/deepseek-v4-flash-0731"
-    "openai/gpt-5.6-sol"
-    "stealth/ox-alpha"
-    "tencent/hy-mt2-1.8b"
-)
 
 # ==========================================
 # KEY RESOLUTION & PRE-FLIGHT
@@ -28,33 +21,40 @@ if [ -z "$OPENROUTER_API_KEY" ]; then
     exit 1
 fi
 
-if [ ! -f "$PROMPT_FILE" ]; then
-    echo "❌ Error: Prompt resource file '$PROMPT_FILE' missing."
+if [ ! -d "$PROMPTS_DIR" ]; then
+    echo "❌ Error: Prompts directory '$PROMPTS_DIR' is missing."
     exit 1
 fi
 
-echo "📋 Found target prompt. Initializing multi-model evaluation loop..."
+SAFE_MODEL_NAME=$(echo "$MODEL" | tr '/' '-')
+
+echo "📋 Initializing single-model multi-prompt evaluation loop..."
+echo "🤖 Target Model:     $MODEL"
+echo "📂 Output Directory:  $OUT_DIR"
 echo "------------------------------------------------------------------"
 
-# Read prompt context safely using jq's raw file input string filter
-# This isolates any complex LaTeX slashes or math variables securely
-PROMPT_TEXT=$(jq -Rs . "$PROMPT_FILE")
-
 # ==========================================
-# MATRIX EXECUTION LOOP
+# EXECUTION LOOP OVER ALL PROMPTS
 # ==========================================
-for CURRENT_MODEL in "${MODELS[@]}"; do
-    SAFE_MODEL_NAME=$(echo "$CURRENT_MODEL" | tr '/' '-')
-    OUT_FILE="${OUT_DIR}/${OUT_PREFIX}-${SAFE_MODEL_NAME}-v1.md"
+# Alphabetic expansion ensures prompts 01 through 32 are executed sequentially
+for PROMPT_FILE in "$PROMPTS_DIR"/*.md; do
+    [ -e "$PROMPT_FILE" ] || continue
+    
+    BASE_NAME=$(basename "$PROMPT_FILE" .md)
+    OUT_FILE="${OUT_DIR}/${BASE_NAME}-${SAFE_MODEL_NAME}-v1.md"
     
     mkdir -p "$OUT_DIR"
     
-    echo -e "\n🤖 Starting Model Sequence: $CURRENT_MODEL"
+    echo -e "\n📝 Processing Prompt: $BASE_NAME"
     echo "📂 Output Destination: $OUT_FILE"
+    
+    # Read prompt context safely using jq's raw file input string filter
+    # This isolates any complex LaTeX slashes or math variables securely
+    PROMPT_TEXT=$(jq -Rs . "$PROMPT_FILE")
     
     # 100% safe nested JSON composition block
     JSON_PAYLOAD=$(jq -n \
-      --arg model "$CURRENT_MODEL" \
+      --arg model "$MODEL" \
       --argjson prompt "$PROMPT_TEXT" \
       '{model: $model, messages: [{role: "user", content: $prompt}]}')
       
@@ -100,4 +100,4 @@ for CURRENT_MODEL in "${MODELS[@]}"; do
 done
 
 echo "------------------------------------------------------------------"
-echo "🏁 Matrix complete! Files saved to '$OUT_DIR'."
+echo "🏁 Single-model evaluation complete! Files saved to '$OUT_DIR'."

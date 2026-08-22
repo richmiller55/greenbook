@@ -14,11 +14,11 @@ This repository hosts a fully automated, end-to-end pipeline that ingests histor
                   ▼
        [ PromptGenerator.scala ] ──(Generates 32 Prompts)──► [ prompts/ ]
                   │                                               │
-                  │                                         (multiModel.sh)
+                  │                                  (evaluation scripts)
                   │                                               │
                   ▼                                               ▼
        [ results/v2/ (Reports) ] ◄──(OpenRouter Evaluation)───────┘
-  (Claude 4.8, GPT-5.6, Kimi, DeepSeek)
+  (Claude 4.8, GPT-5.6, Kimi, DeepSeek, Stealth Ox)
 ```
 
 ### The Step-by-Step Pipeline
@@ -32,12 +32,13 @@ This repository hosts a fully automated, end-to-end pipeline that ingests histor
 3. **Materializing Chapter Blueprints (`prompts/`)**: 
    Running the Scala script generates 32 individual markdown prompt specifications under the `prompts/` directory. Each file functions as a detailed, comprehensive blueprint that forces any LLM evaluator to write a highly technical, graduate-level reference manual entry.
 
-4. **Multi-Model Evaluation Pipeline (`multiModel.sh` / `singleModel.sh`)**: 
-   Bash scripts orchestrate batch, non-streaming, and diagnostics-guarded API requests through the OpenRouter network. The pipeline sends each materialized prompt to multiple state-of-the-art models:
+4. **Evaluation Pipelines (`multiModel.sh` / `singleModel.sh` / `singleModelAllPrompts.sh`)**: 
+   Bash scripts orchestrate batch, non-streaming, and diagnostics-guarded API requests through the OpenRouter network. The pipelines support running multiple models on a single prompt, a single model on a single prompt, or a single model (such as `stealth/ox-alpha`) sequentially across all 32 chapter prompts. The pipeline supports state-of-the-art models including:
    * **Anthropic Claude 4.8 Opus** (`anthropic/claude-4.8-opus-20260528`)
    * **OpenAI GPT 5.6 Sol** (`openai/gpt-5.6-sol`)
    * **Moonshot Kimi K2 Thinking** (`moonshotai/kimi-k2-thinking`)
    * **DeepSeek V4 Flash** (`deepseek/deepseek-v4-flash-0731`)
+   * **Stealth Ox Alpha** (`stealth/ox-alpha`)
 
 5. **Operational Research Manuals & Code Repository (`results/`)**: 
    The outputs are systematically parsed and stored in `results/Logistics-and-Strategy-v2/` as self-contained markdown manuals. Each generated manual delivers:
@@ -58,6 +59,7 @@ This repository hosts a fully automated, end-to-end pipeline that ingests histor
 ├── greenbookXVtoXIX.md                       # Foreign aid and specialized theaters TOC
 ├── PromptGenerator.scala                      # Scala 3 prompt compiler and code generator
 ├── singleModel.sh                            # Script to evaluate a single chapter/model
+├── singleModelAllPrompts.sh                  # Script to run a single model sequentially across all 32 prompts
 ├── multiModel.sh                             # Script to run multi-model evaluation matrices
 ├── prompts/                                  # 32 materialized chapter-specific prompts
 │   ├── 01-v2-Logistics-and-Strategy-Spring-1943.md
@@ -129,11 +131,19 @@ chmod +x singleModel.sh
 ```
 
 ### Step 3: Running the Multi-Model Evaluation Matrix
-To run the full evaluation matrix as demonstrated in `results/Logistics-and-Strategy-v2/` (which processes the prompt and queries all four active OpenRouter slugs sequentially):
+To run the full evaluation matrix as demonstrated in `results/Logistics-and-Strategy-v2/` (which processes a single prompt and queries multiple active OpenRouter slugs sequentially):
 ```bash
 chmod +x multiModel.sh
 ./multiModel.sh
 ```
+
+### Step 4: Running a Single Model Across All 32 Prompts
+To run a single model sequentially across all 32 chapter prompts (by default, `stealth/ox-alpha`):
+```bash
+chmod +x singleModelAllPrompts.sh
+./singleModelAllPrompts.sh [optional_openrouter_model_slug]
+```
+If no model slug is passed, it defaults to the highly efficient and robust `stealth/ox-alpha`. You can optionally supply any other OpenRouter model slug (such as `deepseek/deepseek-v4-flash-0731` or `openai/gpt-5.6-sol`) as the first argument to run that model across the entire historical prompt suite.
 
 ---
 

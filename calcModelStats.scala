@@ -7,10 +7,10 @@ case class ModelPercentages(name: String, costPct: Double, requestPct: Double, t
 @main def calculatePercentages(): Unit =
   // 1. Input Data
   val modelsData = List(
-    ModelMetrics("anthropic/claude-4.8-opus-20260528", cost = 120.50, requests = 1500, tokens = 4500000L),
-    ModelMetrics("moonshotai/kimi-k2-thinking",        cost = 45.20,  requests = 2200, tokens = 3100000L),
-    ModelMetrics("deepseek/deepseek-v4-flash-0731",   cost = 12.80,  requests = 5800, tokens = 8900000L),
-    ModelMetrics("openai/gpt-5.6-sol",                 cost = 95.00,  requests = 3100, tokens = 6200000L)
+    ModelMetrics("anthropic/claude-4.8-opus-20260528", cost = 10.04, requests = 36, tokens = 467_000),
+    ModelMetrics("moonshotai/kimi-k2-thinking",        cost = 0.93,  requests = 36, tokens = 408_000L),
+    ModelMetrics("deepseek/deepseek-v4-flash-0731",   cost = .15,  requests = 37, tokens = 697_000),
+    ModelMetrics("openai/gpt-5.6-sol",                 cost = 14.36,  requests = 35, tokens = 517_000)
   )
 
   // 2. Calculate Totals
