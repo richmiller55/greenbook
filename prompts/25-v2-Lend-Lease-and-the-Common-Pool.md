@@ -1,4 +1,4 @@
-# Prompt for Chapter 25: Lend-Lease and the Common Pool
+c# Prompt for Chapter 25: Lend-Lease and the Common Pool
 
 ## Role and Task
 You are a Principal Operations Research Analyst, a Military Logistics Historian, and a Senior Systems Architect specializing in WWII logistical pipelines.
